@@ -1,0 +1,208 @@
+/* Estilos Gerais */
+.container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 10px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Estilos da Tabela */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  z-index: 10;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+tr:hover {
+  background: #e9ecef;
+}
+
+/* Botões */
+button {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:first-child {
+  background: #28a745;
+  color: white;
+}
+
+button:nth-child(2) {
+  background: #ffc107;
+  color: black;
+}
+
+button:nth-child(3) {
+  background: #dc3545;
+  color: white;
+}
+
+/* Estilos para tabelas específicas */
+.dadosoperacaotable,
+.naviostable,
+.dadostable {
+  width: 100%;
+  margin: auto;
+}
+
+/* Inputs nos filtros e operações */
+.dadosoperacaotable input,
+.filtrotable input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #111111;
+  box-sizing: border-box;
+}
+
+/* Ajuste para tabelas pequenas */
+.dadosoperacaotable .table-wrapper {
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Células de localização */
+.location-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilos para Select */
+select {
+  padding: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.table-wrapper {
+  max-height: 200px;
+  overflow: auto;
+  border: 1px solid #ccc; /* Opcional: Adiciona uma borda para melhor visualização */
+}
+
+.small-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.small-table th, 
+.small-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.small-table thead {
+  position: sticky;
+  top: 0;
+  background: #f8f8f8;
+  z-index: 1;
+}
+
+
+
+/* Área da Tabela Dados (dadostable) */
+.dadostable .table-wrapper {
+  min-height: 100px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc; /* Opcional para visualização */
+}
+
+.dadostable table thead th {
+  background-color: #FF5733; /* Vermelho */
+}
+
+.filtrotable table thead th {
+  background-color: #33FF57; /* Verde */
+}
+
+.naviostable table thead th {
+  background-color: #3357FF; /* Azul */
+}
+
+.operacaotable table thead th {
+  background-color: #333533; /* Rosa */
+}
+@media (max-width: 768px) { 
+    body {
+        font-size: 14px;
+          }
+input, textarea, select {
+    font-size: 16px;
+    }
+
+}
+
+          
+
+/* Definir largura máxima para todas as tabelas */
+table {
+  max-width: 1400px;
+  margin: auto; /* Centraliza as tabelas na tela */
+}
+
+.table-wrapper {
+  max-width: 1400px;
+  margin: auto; /* Centraliza o wrapper da tabela */
+}
+
+
+.tamanhotable .table-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+
+
