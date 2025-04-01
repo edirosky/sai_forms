@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecionando...</title>
     <script>
-      window.location.replace("/sai_forms" + window.location.pathname);
+      sessionStorage.redirect = location.href;
     </script>
+    <meta http-equiv="refresh" content="0;URL='/'" />
   </head>
-  <body>
-    <p>Redirecionando...</p>
-  </body>
 </html>
