@@ -1,0 +1,50 @@
+{
+  "name": "form_online_navios_abordados",
+  "version": "0.1.0",
+  "homepage": "https://edirosky.github.io/sai_forms",
+  "private": true,
+  "dependencies": {
+    "@firebase/auth": "^1.9.1",
+    "axios": "^1.7.9",
+    "cra-template": "1.2.0",
+    "firebase": "^9.22.2",
+    "papaparse": "^5.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-input-mask": "^2.0.4",
+    "react-router-dom": "^6.18.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.2.4",
+    "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
