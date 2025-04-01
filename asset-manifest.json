@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sai_forms/static/css/main.45b18189.css",
-    "main.js": "/sai_forms/static/js/main.18dbbbc3.js",
+    "main.js": "/sai_forms/static/js/main.cfcc0d94.js",
     "static/js/488.a12afce4.chunk.js": "/sai_forms/static/js/488.a12afce4.chunk.js",
     "index.html": "/sai_forms/index.html",
     "main.45b18189.css.map": "/sai_forms/static/css/main.45b18189.css.map",
-    "main.18dbbbc3.js.map": "/sai_forms/static/js/main.18dbbbc3.js.map",
+    "main.cfcc0d94.js.map": "/sai_forms/static/js/main.cfcc0d94.js.map",
     "488.a12afce4.chunk.js.map": "/sai_forms/static/js/488.a12afce4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.45b18189.css",
-    "static/js/main.18dbbbc3.js"
+    "static/js/main.cfcc0d94.js"
   ]
 }
