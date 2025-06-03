@@ -222,19 +222,17 @@ const DadosTable = ({
             }}
           >
             {options.map((option) => (
-              <label
-                key={option.value}
-                title={option.description} // Exibe a descrição como tooltip
-                style={{ display: "block", padding: "5px", cursor: "pointer" }}
-              >
-                <input
-                  type="checkbox"
-                  value={option.value}
-                  checked={value.includes(option.value)}
-                  onChange={handleCheckboxChange}
-                />
-                {" "}{option.value}
-              </label>
+              <label key={option.value} title={option.description} className="dropdown-option">
+  <input
+    type="checkbox"
+    value={option.value}
+    checked={value.includes(option.value)}
+    onChange={handleCheckboxChange}
+  />
+  {option.value}
+</label>
+
+
             ))}
           </div>
         )}

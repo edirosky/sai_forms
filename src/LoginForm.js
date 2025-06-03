@@ -5,30 +5,36 @@ import { auth } from './firebaseConfig';
 
 const LoginForm = () => {
   const navigate = useNavigate();
-  const [formType, setFormType] = useState('login'); // Apenas login e reset
+  const [formType, setFormType] = useState('login'); // 'login' e 'reset'
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+  // Lida com autenticação ou recuperação de senha
   const handleAuth = async (e) => {
     e.preventDefault();
-    setError('');
+    setError(''); // Limpa mensagens de erro anteriores
 
     try {
       if (formType === 'login') {
+        // Tentando fazer login com email e senha
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        // Redireciona para o componente App se o login for bem-sucedido
+        // Salva o token no localStorage após login bem-sucedido
+        localStorage.setItem('authToken', userCredential.user.accessToken);
+        // Redireciona para a página principal após login
         navigate('/app');
       } else if (formType === 'reset') {
+        // Envia um link de reset de senha para o email
         await sendPasswordResetEmail(auth, email);
         alert('Email de recuperação enviado!');
-        setFormType('login');
+        setFormType('login'); // Muda para o formulário de login após o envio
       }
     } catch (error) {
-      handleError(error);
+      handleError(error); // Lida com erros de autenticação
     }
   };
 
+  // Lida com os erros baseados no código de erro retornado
   const handleError = (error) => {
     const messages = {
       'auth/invalid-email': 'Email inválido',

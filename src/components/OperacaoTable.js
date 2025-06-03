@@ -57,6 +57,8 @@ const OperacaoTable = ({
   };
 
   return (
+    <div className="operacaotable">
+      <div className="table-wrapper">
     <table>
       <thead>
         <tr>
@@ -162,6 +164,9 @@ const OperacaoTable = ({
         </tr>
       </tbody>
     </table>
+    </div>
+    </div>
+
   );
 };
 

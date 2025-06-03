@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem('authToken');
     if (!token) {
-      navigate('/'); // Redirecionar para a página de login caso não haja token
+      navigate('/login'); // Redirecionar para a página de login caso não haja token
     }
   }, [navigate]); // O useEffect será disparado toda vez que o `navigate` mudar
 
@@ -79,10 +79,14 @@ function App() {
         config_DadosTable={configDadosTable}
       />
 
-
+      <NovosTable
+        dadosSelecionados={dadosSelecionados}
+        tipoInfracaoOptions={configDadosTable.tipoInfracaoOptions}
+        medidasTomadasOptions={configDadosTable.medidasTomadasOptions}
+      />
 
       <button onClick={enviarDados} style={{ marginTop: "20px", padding: "10px 20px" }}>
-        Download Final para Excel
+        Enviar/Download de dados
       </button>
       <button
         onClick={resetarDados}
@@ -104,13 +108,7 @@ function App() {
           config_DadosTable={configDadosTable}
           onClose={() => setShowInfractionsModal(false)}
         />
-        
       )}
-            <NovosTable
-        dadosSelecionados={dadosSelecionados}
-        tipoInfracaoOptions={configDadosTable.tipoInfracaoOptions}
-        medidasTomadasOptions={configDadosTable.medidasTomadasOptions}
-      />
     </div>
   );
 }
